@@ -13,8 +13,6 @@ public:
 	MathLibrary::Vector2 getVelocity() { return m_velocity; }
 
 	void setVelocity(MathLibrary::Vector2 velocity) { m_velocity = velocity; }
-	float getMaxSpeed() { return m_maxSpeed; }
-	void setMaxSpeed(float maxSpeed) { m_maxSpeed = maxSpeed; }
 	MathLibrary::Vector2 getSteeringForce() { return m_steeringForce; }
 	Actor* getTarget() { return m_target; }
 	void update(float deltaTime) override;
@@ -22,9 +20,7 @@ public:
 private:
 	MathLibrary::Vector2 m_velocity;
 	MathLibrary::Vector2 m_steeringForce;
-	float m_maxSpeed = 10;
-	float m_seekForce = 10;
+	float m_seekForce = 100;
 	Actor* m_target;
-	Actor* m_object;
 };
 

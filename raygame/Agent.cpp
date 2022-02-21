@@ -23,12 +23,12 @@ void Agent::update(float deltaTime)
 {
 	Actor::update(deltaTime);
 	
-	
-	
+	/*m_seekComponent->getVelocity() = m_seekComponent->getVelocity() + (m_seekComponent->getSteeringForce() * deltaTime);
+	getTransform()->getWorldPosition() = getTransform()->getWorldPosition() + (m_seekComponent->getVelocity() * deltaTime);*/
 	/*MathLibrary::Vector2 position = getTransform()->getWorldPosition();
 	MathLibrary::Vector2 velocity = getTransform()->getForward() + (m_seekComponent->getSteeringForce() * deltaTime);
 	position = position + (velocity * deltaTime);*/
-	MathLibrary::Vector2 heading = m_seekComponent->getVelocity().normalize();
+	//MathLibrary::Vector2 heading = m_seekComponent->getVelocity().normalize();
 }
 
 void Agent::draw()
