@@ -2,7 +2,6 @@
 #include "Actor.h"
 class SeekComponent;
 class SpriteComponent;
-class moveComponent;
 
 class Agent :
 	public Actor
@@ -17,7 +16,6 @@ public:
 	void draw() override;
 	
 private:
-	moveComponent* m_moveComponent;
 	SeekComponent* m_seekComponent;
 	SpriteComponent* m_sprite;
 	Actor* m_target;

@@ -5,9 +5,11 @@
 void SeekComponent::update(float deltaTime)
 {
 	MathLibrary::Vector2 direction;
-	direction = getTarget()->getTransform()->getWorldPosition() - m_object->getTransform()->getWorldPosition();
-	direction = direction.normalize() * getMaxSpeed();
-	MathLibrary::Vector2 steeringForce = direction - getVelocity();
-	getVelocity() = getVelocity() + (steeringForce * deltaTime);
-	m_object->getTransform()->getWorldPosition() = m_object->getTransform()->getWorldPosition() + (getVelocity() * deltaTime);
+
+	direction = getOwner()->getTransform()->getWorldPosition() - m_target->getTransform()->getWorldPosition();
+	direction.normalize();
+
+	MathLibrary::Vector2 desiredVelocity = direction * m_maxSpeed;
+
+	m_steeringForce = desiredVelocity + getVelocity();
 }

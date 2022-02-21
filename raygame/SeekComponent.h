@@ -1,7 +1,7 @@
 #pragma once
 #include "Actor.h"
 #include "Component.h"
-#include "Vector2.h"
+#include <Vector2.h>
 
 class SeekComponent :
 	public Component
