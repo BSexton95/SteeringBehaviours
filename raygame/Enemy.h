@@ -3,5 +3,6 @@
 class Enemy :
 	public Actor
 {
+public:
 };
 

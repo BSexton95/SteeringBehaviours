@@ -62,6 +62,12 @@
     <ClCompile Include="StartScene.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="SeekComponent.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Agent.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Scene.h">
@@ -110,6 +116,12 @@
       <Filter>Header Files</Filter>
     </ClInclude>
     <ClInclude Include="StartScene.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="SeekComponent.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Agent.h">
       <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>
