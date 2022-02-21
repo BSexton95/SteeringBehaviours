@@ -7,7 +7,7 @@ class SeekComponent :
 	public Component
 {
 public:
-	SeekComponent(const char* name = "Seek Component") : Component::Component(name) {}
+	SeekComponent(Actor* target, const char* name = "Seek Component") : Component::Component(name) { m_target = target; }
 	~SeekComponent() {};
 
 	MathLibrary::Vector2 getVelocity() { return m_velocity; }
@@ -22,7 +22,8 @@ public:
 private:
 	MathLibrary::Vector2 m_velocity;
 	MathLibrary::Vector2 m_steeringForce;
-	float m_maxSpeed;
+	float m_maxSpeed = 10;
+	float m_seekForce = 10;
 	Actor* m_target;
 	Actor* m_object;
 };

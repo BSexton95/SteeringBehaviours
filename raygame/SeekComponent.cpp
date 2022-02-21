@@ -9,7 +9,10 @@ void SeekComponent::update(float deltaTime)
 	direction = getOwner()->getTransform()->getWorldPosition() - m_target->getTransform()->getWorldPosition();
 	direction.normalize();
 
-	MathLibrary::Vector2 desiredVelocity = direction * m_maxSpeed;
+	MathLibrary::Vector2 desiredVelocity = direction * m_seekForce;
 
-	m_steeringForce = desiredVelocity + getVelocity();
+	m_steeringForce = desiredVelocity - getVelocity();
+
+	getVelocity() = getVelocity() + (m_steeringForce * deltaTime);
+	getOwner()->getTransform()->getWorldPosition() = getOwner()->getTransform()->getWorldPosition() + (getVelocity() * deltaTime);
 }

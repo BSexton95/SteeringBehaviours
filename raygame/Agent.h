@@ -2,7 +2,7 @@
 #include "Actor.h"
 class SeekComponent;
 class SpriteComponent;
-
+class moveComponent;
 class Agent :
 	public Actor
 {
