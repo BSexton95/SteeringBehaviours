@@ -3,7 +3,7 @@
 #include "moveComponent.h"
 #include "SpriteComponent.h"
 #include "Transform2D.h"
-#include "moveComponent.h"
+#include "FleeComponent.h"
 
 void Agent::start()
 {
@@ -15,8 +15,10 @@ void Agent::start()
 	Actor::start();
 
 	//Adds the seek component
-	m_seekComponent = dynamic_cast<SeekComponent*>(addComponent(new SeekComponent(m_target)));
-	m_seekComponent->setVelocity({ 50, 50 });
+	//m_seekComponent = dynamic_cast<SeekComponent*>(addComponent(new SeekComponent(m_target)));
+	//m_seekComponent->setVelocity({ 50, 50 });
+	m_fleeComponent = dynamic_cast<FleeComponent*>(addComponent(new FleeComponent(m_target)));
+	m_fleeComponent->setVelocity({ 50, 50 });
 
 	//Add sprite component
 	m_sprite = dynamic_cast<SpriteComponent*>(addComponent(new SpriteComponent("Images/enemy.png")));

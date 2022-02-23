@@ -3,6 +3,7 @@
 #include <Vector2.h>
 class SeekComponent;
 class SpriteComponent;
+class FleeComponent;
 
 class Agent :
 	public Actor
@@ -41,6 +42,7 @@ public:
 private:
 	SeekComponent* m_seekComponent;
 	SpriteComponent* m_sprite;
+	FleeComponent* m_fleeComponent;
 	Actor* m_target;
 };
 
