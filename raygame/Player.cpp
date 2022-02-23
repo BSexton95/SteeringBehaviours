@@ -9,7 +9,7 @@ void Player::start()
 
 	m_inputComponent = dynamic_cast<InputComponent*>(addComponent(new InputComponent()));
 	m_moveComponent = dynamic_cast<moveComponent*>(addComponent(new moveComponent()));
-	m_moveComponent->setMaxSpeed(10);
+	m_moveComponent->setMaxSpeed(50);
 	m_spriteComponent = dynamic_cast<SpriteComponent*>(addComponent(new SpriteComponent("images/player.png")));
 	
 	//Set spawn point
@@ -23,5 +23,5 @@ void Player::update(float deltaTime)
 
 	MathLibrary::Vector2 moveDirection = m_inputComponent->getMoveAxis();
 
-	m_moveComponent->setVelocity(moveDirection * 100);
+	m_moveComponent->setVelocity(moveDirection * 200);
 }

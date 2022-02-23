@@ -3,6 +3,7 @@
 #include "moveComponent.h"
 #include "SpriteComponent.h"
 #include "Transform2D.h"
+#include "moveComponent.h"
 
 void Agent::start()
 {
@@ -12,23 +13,19 @@ void Agent::start()
 
 	//Base Actor start
 	Actor::start();
+
 	//Adds the seek component
 	m_seekComponent = dynamic_cast<SeekComponent*>(addComponent(new SeekComponent(m_target)));
 	m_seekComponent->setVelocity({ 50, 50 });
-	m_sprite = dynamic_cast<SpriteComponent*>(addComponent(new SpriteComponent("Images/enemy.png")));
 
+	//Add sprite component
+	m_sprite = dynamic_cast<SpriteComponent*>(addComponent(new SpriteComponent("Images/enemy.png")));
+	
 }
 
 void Agent::update(float deltaTime)
 {
 	Actor::update(deltaTime);
-	
-	/*m_seekComponent->getVelocity() = m_seekComponent->getVelocity() + (m_seekComponent->getSteeringForce() * deltaTime);
-	getTransform()->getWorldPosition() = getTransform()->getWorldPosition() + (m_seekComponent->getVelocity() * deltaTime);*/
-	/*MathLibrary::Vector2 position = getTransform()->getWorldPosition();
-	MathLibrary::Vector2 velocity = getTransform()->getForward() + (m_seekComponent->getSteeringForce() * deltaTime);
-	position = position + (velocity * deltaTime);*/
-	//MathLibrary::Vector2 heading = m_seekComponent->getVelocity().normalize();
 }
 
 void Agent::draw()
