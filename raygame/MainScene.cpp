@@ -16,4 +16,10 @@ void MainScene::start()
 	agent->getTransform()->setScale({ 50, 50 });
 
 	addActor(agent);
+
+	Agent* agent2 = new Agent(100, 100, "Agent", player);
+	agent2->getTransform()->setScale({ 50, 50 });
+	
+
+	addActor(agent2);
 }

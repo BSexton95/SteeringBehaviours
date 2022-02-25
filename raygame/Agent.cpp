@@ -15,10 +15,10 @@ void Agent::start()
 	Actor::start();
 
 	//Adds the seek component
-	//m_seekComponent = dynamic_cast<SeekComponent*>(addComponent(new SeekComponent(m_target)));
-	//m_seekComponent->setVelocity({ 50, 50 });
-	m_fleeComponent = dynamic_cast<FleeComponent*>(addComponent(new FleeComponent(m_target)));
-	m_fleeComponent->setVelocity({ 50, 50 });
+	m_seekComponent = dynamic_cast<SeekComponent*>(addComponent(new SeekComponent(m_target)));
+	m_seekComponent->setVelocity({ 50, 50 });
+	//m_fleeComponent = dynamic_cast<FleeComponent*>(addComponent(new FleeComponent(m_target)));
+	//m_fleeComponent->setVelocity({ 10, 10 });
 
 	//Add sprite component
 	m_sprite = dynamic_cast<SpriteComponent*>(addComponent(new SpriteComponent("Images/enemy.png")));

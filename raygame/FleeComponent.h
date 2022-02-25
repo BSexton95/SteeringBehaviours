@@ -22,7 +22,7 @@ public:
 private:
 	MathLibrary::Vector2 m_velocity;
 	MathLibrary::Vector2 m_steeringForce;
-	float m_fleeForce = 5;
+	float m_fleeForce = 10;
 	Actor* m_target;
 };
 
