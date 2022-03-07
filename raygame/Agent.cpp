@@ -4,6 +4,7 @@
 #include "SpriteComponent.h"
 #include "Transform2D.h"
 #include "FleeComponent.h"
+#include "WonderComponent.h"
 
 void Agent::start()
 {
@@ -18,9 +19,9 @@ void Agent::start()
 	m_moveComponent->setMaxSpeed(50);
 	m_moveComponent->setVelocity({ 50, 50 });
 	//Adds the seek component
-	m_seekComponent = dynamic_cast<SeekComponent*>(addComponent(new SeekComponent(m_target)));
+	//m_seekComponent = dynamic_cast<SeekComponent*>(addComponent(new SeekComponent(m_target)));
 	//m_seekComponent->setVelocity({ 50, 50 });
-	
+	m_wonderComponent = dynamic_cast<WonderComponent*>(addComponent(new WonderComponent()));
 	//m_fleeComponent = dynamic_cast<FleeComponent*>(addComponent(new FleeComponent(m_target)));
 	//m_fleeComponent->setVelocity({ 10, 10 });
 

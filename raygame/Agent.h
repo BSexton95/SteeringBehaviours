@@ -5,6 +5,7 @@ class SeekComponent;
 class SpriteComponent;
 class FleeComponent;
 class moveComponent;
+class WonderComponent;
 
 class Agent :
 	public Actor
@@ -45,6 +46,7 @@ private:
 	SpriteComponent* m_sprite;
 	FleeComponent* m_fleeComponent;
 	moveComponent* m_moveComponent;
+	WonderComponent* m_wonderComponent;
 	Actor* m_target;
 };
 

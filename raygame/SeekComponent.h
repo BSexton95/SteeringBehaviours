@@ -12,8 +12,8 @@ public:
 	/// </summary>
 	/// <param name="target">The actor to seek</param>
 	/// <param name="name"></param>
-	SeekComponent(Actor* target, const char* name = "Seek Component") : Component::Component(name) { m_target = target; }
-
+	SeekComponent(Actor* target) { m_target = target; }
+	SeekComponent(MathLibrary::Vector2 randPoint) { m_randPoint = randPoint; };
 	/// <summary>
 	/// Deconsructor for the seek component
 	/// </summary>
@@ -47,5 +47,6 @@ private:
 	MathLibrary::Vector2 m_steeringForce;
 	float m_seekForce = 3;
 	Actor* m_target;
+	MathLibrary::Vector2 m_randPoint;
 };
 
