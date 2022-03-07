@@ -66,6 +66,7 @@ Component* Actor::addComponent(Component* component)
     m_component = tempArray;
     m_componentCount++;
 
+
     return component;
 }
 
