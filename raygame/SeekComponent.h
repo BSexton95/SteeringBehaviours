@@ -45,7 +45,7 @@ public:
 private:
 	MathLibrary::Vector2 m_velocity;
 	MathLibrary::Vector2 m_steeringForce;
-	float m_seekForce = 5;
+	float m_seekForce = 3;
 	Actor* m_target;
 };
 

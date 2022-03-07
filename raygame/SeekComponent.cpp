@@ -14,7 +14,8 @@ void SeekComponent::update(float deltaTime)
 	//Collect 
 	m_steeringForce = desiredVelocity - getVelocity();
 
-	setVelocity(m_velocity + (m_steeringForce * deltaTime));
+	//setVelocity(getVelocity() + (m_steeringForce * deltaTime));
+	/*setVelocity(m_velocity + (m_steeringForce * deltaTime));
 	getOwner()->getTransform()->setLocalPosition(getOwner()->getTransform()->getLocalPosition() + getVelocity() * deltaTime);
-	getOwner()->getTransform()->setForward(getVelocity().normalize());
+	getOwner()->getTransform()->setForward(getVelocity().normalize());*/
 }

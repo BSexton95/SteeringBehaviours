@@ -14,10 +14,14 @@ void Agent::start()
 	//Base Actor start
 	Actor::start();
 
+	m_moveComponent = dynamic_cast<moveComponent*>(addComponent(new moveComponent()));
+	m_moveComponent->setMaxSpeed(50);
+	m_moveComponent->setVelocity({ 50, 50 });
 	//Adds the seek component
-	//m_seekComponent = dynamic_cast<SeekComponent*>(addComponent(new SeekComponent(m_target)));
+	m_seekComponent = dynamic_cast<SeekComponent*>(addComponent(new SeekComponent(m_target)));
 	//m_seekComponent->setVelocity({ 50, 50 });
-	m_fleeComponent = dynamic_cast<FleeComponent*>(addComponent(new FleeComponent(m_target)));
+	
+	//m_fleeComponent = dynamic_cast<FleeComponent*>(addComponent(new FleeComponent(m_target)));
 	//m_fleeComponent->setVelocity({ 10, 10 });
 
 	//Add sprite component
@@ -28,6 +32,7 @@ void Agent::start()
 void Agent::update(float deltaTime)
 {
 	Actor::update(deltaTime);
+	
 }
 
 void Agent::draw()

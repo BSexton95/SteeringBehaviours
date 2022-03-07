@@ -11,6 +11,6 @@ void FleeComponent::update(float deltaTime)
 	m_steeringForce = desiredVelocity - getVelocity();
 
 	setVelocity(m_velocity + (m_steeringForce * deltaTime));
-	getOwner()->getTransform()->setLocalPosition(getOwner()->getTransform()->getLocalPosition() + (getVelocity() * deltaTime));
-	getOwner()->getTransform()->setForward(getVelocity().normalize());
+	/*getOwner()->getTransform()->setLocalPosition(getOwner()->getTransform()->getLocalPosition() + (getVelocity() * deltaTime));
+	getOwner()->getTransform()->setForward(getVelocity().normalize());*/
 }
