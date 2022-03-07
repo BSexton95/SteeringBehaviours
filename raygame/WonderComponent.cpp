@@ -6,6 +6,11 @@
 #include <time.h>
 #include "SeekComponent.h"
 
+void WonderComponent::start()
+{
+	
+}
+
 void WonderComponent::update(float deltaTime)
 {
 	float distance = 5;
@@ -17,9 +22,9 @@ void WonderComponent::update(float deltaTime)
 
 	MathLibrary::Vector2 randPos = { (float)cos(randNum), (float)sin(randNum) };
 	MathLibrary::Vector2 scaledRandPos = randPos * 8;
-	MathLibrary::Vector2 randPoint = circleDistance + scaledRandPos;
+	m_seekComponent->m_randPoint = circleDistance + scaledRandPos;
 	
-	SeekComponent(randPoint);
+	
 
 
 }
