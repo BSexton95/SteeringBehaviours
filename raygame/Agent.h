@@ -1,11 +1,9 @@
 #pragma once
 #include "Actor.h"
+#include "ActorArray.h"
 #include <Vector2.h>
-class SeekComponent;
-class SpriteComponent;
-class FleeComponent;
+class SteeringComponent;
 class moveComponent;
-class WonderComponent;
 
 class Agent :
 	public Actor
@@ -36,17 +34,21 @@ public:
 	/// <param name="deltaTime"></param>
 	void update(float deltaTime) override;
 
-	/// <summary>
+	void onAddComponent(Component* component) override;
+	float getMaxForce() { return m_maxForce; }
+	void setMaxForce(float maxForce) { m_maxForce = maxForce; }
+	moveComponent* getMoveComponent() { return m_moveComponent; }
+
+	/*/// <summary>
 	/// Draws the sprite for an agent
 	/// </summary>
-	void draw() override;
+	void draw() override;*/
 	
 private:
-	SeekComponent* m_seekComponent;
-	SpriteComponent* m_sprite;
-	FleeComponent* m_fleeComponent;
+	DynamicArray<SteeringComponent*> m_steeringComponents;//Remember to change to dynamic array
+	float m_maxForce;
 	moveComponent* m_moveComponent;
-	WonderComponent* m_wonderComponent;
 	Actor* m_target;
+	MathLibrary::Vector2 m_force;
 };
 

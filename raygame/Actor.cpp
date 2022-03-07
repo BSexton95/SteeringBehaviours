@@ -69,6 +69,10 @@ Component* Actor::addComponent(Component* component)
     return component;
 }
 
+void Actor::onAddComponent(Component* component)
+{
+}
+
 bool Actor::removeComponent(Component* component)
 {
     //Check to see if the component was null
