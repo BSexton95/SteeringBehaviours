@@ -6,8 +6,9 @@
 void Agent::start()
 {
 	Actor::start();
+
 	m_moveComponent = addComponent<moveComponent>();
-	m_moveComponent->setMaxSpreed(500);
+	m_moveComponent->setMaxSpeed(500);
 	m_moveComponent->setUpdateFacing(true);
 }
 

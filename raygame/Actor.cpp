@@ -52,6 +52,7 @@ Component* Actor::addComponent(Component* component)
     m_component = tempArray;
     m_componentCount++;
 
+    onAddComponent(component);
 
     return component;
 }
@@ -103,6 +104,7 @@ bool Actor::removeComponent(Component* component)
     return componentRemoved;
 }
 
+
 void Actor::start()
 {
     m_started = true;
@@ -118,7 +120,7 @@ void Actor::update(float deltaTime)
 {
     for (int i = 0; i < m_componentCount; i++)
     {
-        if (m_component[i]->getStarted())
+        if (!m_component[i]->getStarted())
             m_component[i]->start();
 
         m_component[i]->update(deltaTime);

@@ -1,5 +1,5 @@
 #pragma once
-#include "SteeringComponent.h"
+#include "Component.h"
 #include "Actor.h"
 #include <Vector2.h>
 class Agent;
@@ -20,7 +20,7 @@ public:
 
 	Agent* getAgent() { return (Agent*)getOwner(); }
 private:
-	float m_steeringForce;
+	float m_steeringForce = 0;
 	Actor* m_target = nullptr;
 };
 

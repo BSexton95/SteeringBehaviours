@@ -5,7 +5,6 @@ class Component
 {
 public:
 	Component();
-	Component(const char* name);
 	virtual ~Component() {}
 
 	/// <summary>

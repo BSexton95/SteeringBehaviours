@@ -39,10 +39,6 @@ public:
 	void setMaxForce(float maxForce) { m_maxForce = maxForce; }
 	moveComponent* getMoveComponent() { return m_moveComponent; }
 
-	/*/// <summary>
-	/// Draws the sprite for an agent
-	/// </summary>
-	void draw() override;*/
 	
 private:
 	DynamicArray<SteeringComponent*> m_steeringComponents;//Remember to change to dynamic array
