@@ -148,7 +148,6 @@
   <ItemGroup>
     <ClCompile Include="AABBCollider.cpp" />
     <ClCompile Include="Actor.cpp" />
-    <ClCompile Include="ActorArray.cpp" />
     <ClCompile Include="Agent.cpp" />
     <ClCompile Include="CircleCollider.cpp" />
     <ClCompile Include="Collider.cpp" />
@@ -165,13 +164,14 @@
     <ClCompile Include="SeekComponent.cpp" />
     <ClCompile Include="SpriteComponent.cpp" />
     <ClCompile Include="StartScene.cpp" />
+    <ClCompile Include="SteeringComponent.cpp" />
     <ClCompile Include="Transform2D.cpp" />
-    <ClCompile Include="WonderComponent.cpp" />
+    <ClCompile Include="WanderComponent.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="AABBCollider.h" />
     <ClInclude Include="Actor.h" />
-    <ClInclude Include="ActorArray.h" />
+    <ClInclude Include="DynamicArray.h" />
     <ClInclude Include="Agent.h" />
     <ClInclude Include="CircleCollider.h" />
     <ClInclude Include="Collider.h" />
@@ -187,8 +187,9 @@
     <ClInclude Include="SeekComponent.h" />
     <ClInclude Include="SpriteComponent.h" />
     <ClInclude Include="StartScene.h" />
+    <ClInclude Include="SteeringComponent.h" />
     <ClInclude Include="Transform2D.h" />
-    <ClInclude Include="WonderComponent.h" />
+    <ClInclude Include="WanderComponent.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

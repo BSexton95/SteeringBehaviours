@@ -1,7 +1,7 @@
 #pragma once
-#include "Component.h"
+#include "SteeringComponent.h"
+#include "Actor.h"
 #include <Vector2.h>
-class Actor;
 class Agent;
 
 

@@ -12,14 +12,15 @@ void MainScene::start()
 
 	addActor(player);
 
-	Agent* agent = new Agent(50, 50, "Agent", player);
+	/*Agent* agent = new Agent(50, 50, "Agent", player);
 	agent->getTransform()->setScale({ 50, 50 });
 
 	addActor(agent);
 
 	Agent* agent2 = new Agent(100, 100, "Agent", player);
-	agent2->getTransform()->setScale({ 50, 50 });
+	agent2->getTransform()->setScale({ 50, 50 });*/
 	
 
-	addActor(agent2);
+	/*addActor(agent2);*/
+
 }

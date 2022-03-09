@@ -2,13 +2,13 @@
 #include "moveComponent.h"
 #include "SteeringComponent.h"
 
+
 void Agent::start()
 {
-	//Base Actor start
 	Actor::start();
-
 	m_moveComponent = addComponent<moveComponent>();
-	
+	m_moveComponent->setMaxSpreed(500);
+	m_moveComponent->setUpdateFacing(true);
 }
 
 void Agent::update(float deltaTime)
