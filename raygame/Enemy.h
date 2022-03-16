@@ -1,8 +1,21 @@
 #pragma once
-#include "Actor.h"
+#include "Agent.h"
+
 class Enemy :
-	public Actor
+	public Agent
 {
 public:
+	Enemy(float x, float y, const char* name, float maxForce, float maxSpeed, Actor* target);
+	
+	void start() override;
+	void setTarget(Actor* target) { m_target = target; }
+
+	bool getIsAggressive() { return m_isAggressive; }
+	void setIsAggressive(bool value) { m_isAggressive = value; }
+
+	bool getTargetInRange();
+private:
+	Actor* m_target;
+	bool m_isAggressive;
 };
 

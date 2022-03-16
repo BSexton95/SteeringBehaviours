@@ -17,7 +17,7 @@ public:
 	/// <param name="name">Agent name</param>
 	/// <param name="target">The actor the agent is seeking or fleeing from</param>
 	Agent(float x, float y, const char* name, Actor* target) : Actor(x, y, name) { m_target = target; }
-
+	Agent(float x, float y, const char* name, float maxForce, float maxSpeed);
 	/// <summary>
 	/// Deconstructor for an agent
 	/// </summary>
